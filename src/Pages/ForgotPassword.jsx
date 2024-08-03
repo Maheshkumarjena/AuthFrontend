@@ -13,7 +13,7 @@ const ForgotPassword = ({feedback,setFeedback}) => {
 
     function handleSubmit(e) {
         e.preventDefault()
-        axios.post('http://localhost:3000/auth/forgotpassword',{email})
+        axios.post('https://auth-backendd.vercel.app/auth/forgotpassword',{email})
         .then(res=>{
             if(res.data.status){
                 alert('Check your email for reset password link .')

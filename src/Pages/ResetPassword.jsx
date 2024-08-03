@@ -16,7 +16,7 @@ const ResetPassword = ({feedback,setFeedback}) => {
 
     function handleSubmit(e) {
         e.preventDefault()
-        axios.put(`http://localhost:3000/auth/resetpassword/${token}`,{password})
+        axios.put(`https://auth-backendd.vercel.app/auth/resetpassword/${token}`,{password})
         .then(res=>{
             if(res.data.status){
                 setFeedback('password has been successfully updated')

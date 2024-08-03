@@ -11,7 +11,7 @@ const DashBoard = ({feedback,setFeedback,setFbvis,fbvis,userName,setUserName,use
   axios.defaults.withCredentials=true;
 
   useEffect(()=>{
-    axios.get('http://localhost:3000/auth/verify')
+    axios.get('https://auth-backendd.vercel.app/auth/verify')
     .then(res=>{
        console.log(res);
        setUserEmail(res.data.email)
