@@ -6,7 +6,7 @@ import ForgotPassword from './Pages/ForgotPassword';
 import ResetPassword from './Pages/ResetPassword';
 import DashBoard from './Pages/DashBoard';
 import Home from './Pages/Home';
-import react ,{ useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   const [feedback,setFeedback]=useState();

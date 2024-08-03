@@ -1,6 +1,6 @@
 import React from 'react'
 import {useNavigate } from 'react-router-dom'
-import { useEffect,useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -31,12 +31,12 @@ const DashBoard = ({feedback,setFeedback,setFbvis,fbvis,userName,setUserName,use
       }
 
     })
-  },[])
+  },[navigate , setFbvis, setFeedback, setUserEmail, setUserName])
 
 
 const handleclick =(e)=>{
 
-    e.preventDefault;
+    e.preventDefault();
     axios.defaults.withCredentials=true;
 
     axios.post('http://localhost:3000/auth/logout')
@@ -48,7 +48,7 @@ const handleclick =(e)=>{
             setTimeout(() => {
                 setFbvis(false)
                 setFeedback(" ")
-            }, timeout);
+            }, 3000);
         }
         else{
             setFeedback('couldnot logout')
