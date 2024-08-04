@@ -18,9 +18,7 @@ const SignUp = ({feedback,setFeedback}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://auth-backendd.vercel.app/auth/signup", {
-        user,
-      });
+      const res = await axios.post("https://auth-backendd.vercel.app/auth/signup",user);
 
        
       setFeedback(res.data.message);
